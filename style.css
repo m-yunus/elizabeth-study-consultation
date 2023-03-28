@@ -1105,7 +1105,6 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 .top-bar-area li {
   display: inline-block;
   margin-left: 15px;
-  padding-left: 15px;
   position: relative;
   z-index: 1;
 }
@@ -1143,7 +1142,6 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
   position: absolute;
   left: 0;
   top: 5px;
-  content: "";
   height: 19px;
   width: 1px;
   border-left: 1px solid #dddddd;
@@ -5829,4 +5827,43 @@ footer .footer-bottom p {
   display: initial;
   /* height: auto; */
   width: 17rem;
+}
+ul.social {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+ul.social > li {
+  display: inline-block;
+}
+
+ul.social > li > a {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 36px;
+  background-color: #222222;
+  color: #fff;
+  margin: 0 3px 3px 0;
+}
+
+/* ul.social > li  {
+  
+  background-color: #ffffff;
+} */
+.social-icon{
+ 
+  color: #001d4c;
+
+}
+.social-ul {
+  background: white;
+    /* padding: 5px; */
+    width: 2rem;
+    text-align: center;
+    border-radius: 3rem;
 }
