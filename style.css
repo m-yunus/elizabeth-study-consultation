@@ -5712,7 +5712,7 @@ footer .branches li:last-child {
 }
 
 footer .f-item.link li {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   position: relative;
   z-index: 1;
   padding-left: 20px;
