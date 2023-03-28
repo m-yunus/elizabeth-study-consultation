@@ -5825,3 +5825,8 @@ footer .footer-bottom p {
   background: url(assets/img/preloader.gif) center no-repeat #fff;
   text-align: center;
 }
+.navbar-brand>img {
+  display: initial;
+  /* height: auto; */
+  width: 17rem;
+}
