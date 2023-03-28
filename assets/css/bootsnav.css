@@ -1369,7 +1369,7 @@ nav.navbar.bootsnav {
 @media (min-width: 1024px) {
 
   nav.navbar.bootsnav.bg-theme {
-    background: #1ebeb6;
+    background: #ffffff;
   }
 
   nav.navbar.bootsnav.bg-theme .logo-regular {
@@ -1377,11 +1377,11 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav.bg-theme ul.nav > li > a {
-    color: #ffffff;
+    color: black;
   }
 
   nav.navbar.bootsnav.bg-theme ul.nav > li > a:hover {
-    color: #ffffff;
+    color: #1ebeb6;
   }
 
   nav.navbar.bootsnav.bg-theme .attr-nav > ul > li > a {
@@ -1575,7 +1575,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav .navbar-brand {
-    padding: 20px 15px;
+    padding: 10px 15px;
   }
 
   nav.navbar.bootsnav ul.nav > li.active > a {
