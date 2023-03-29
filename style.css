@@ -3033,9 +3033,9 @@ body,
   box-shadow: 0 0 10px #e7e7e7;
 }
 
-.feature-entry-area .single-item:nth-child(2n) .item {
+/* .feature-entry-area .single-item:nth-child(2n) .item {
   background: #1ebeb6;
-}
+} */
 
 .feature-entry-area .item i {
   display: inline-block;
@@ -3063,12 +3063,12 @@ body,
   opacity: 0.5;
   z-index: -1;
 }
-
+/* 
 .feature-entry-area .single-item:nth-child(2n) .item i, 
 .feature-entry-area .single-item:nth-child(2n) .item h4, 
 .feature-entry-area .single-item:nth-child(2n) .item {
-  color: #ffffff;
-}
+  /* color: #ffffff; */
+ 
 
 .feature-entry-area .single-item:nth-child(2n) .item i::after {
   background: url(assets/img/shape/10-light.png);
