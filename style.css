@@ -2290,7 +2290,7 @@ body,
 }
 
 .about-area .thumb-box img {
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .about-area .thumb-box .intro-video {
