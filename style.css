@@ -5951,3 +5951,13 @@ padding-bottom: 2rem;
     transform: translate(0);
   }
 }
+
+.effect-hover:hover{
+
+ background-color: #000000;
+ color: white;
+  border: 3px solid #00d7c3;
+}
+.apply{
+  background-color: #1ebeb6; color: white;
+}
