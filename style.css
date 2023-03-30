@@ -5880,6 +5880,7 @@ ul.social > li > a {
   display: flex;
   width: 100vw;
 flex-direction: column;
+padding-bottom: 2rem;
 }
 .job-heading{
   text-align: center;
@@ -5890,6 +5891,7 @@ flex-direction: column;
   background-color: #ffffff;
   flex-direction: row;
   padding: 2rem;
+  margin-top: 2rem;
 }
 .job-details-section ul{
   display: flex;
@@ -5903,4 +5905,23 @@ flex-direction: column;
   background-color: #1ebeb6;
   display: flex;
   padding: 2rem;
+  margin-bottom: 8rem;
+}
+.item h4{
+  margin-top: 2rem;
+}
+.fun-factor-area .fun-fact-items .face::after {
+  position: absolute;
+  right: -25px;
+  top: 0;
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 20px;
+}
+@media (max-width:768px) {
+ 
+  .job-details-section{
+    padding: 1rem;
+  }
 }

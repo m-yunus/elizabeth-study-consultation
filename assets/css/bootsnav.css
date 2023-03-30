@@ -2230,7 +2230,7 @@ nav.navbar.bootsnav {
 
   nav.navbar.bootsnav .navbar-brand {
     display: inline-block;
-    float: none !important;
+    /* float: none !important; */
     margin: 0 !important;
   }
 
@@ -2244,8 +2244,8 @@ nav.navbar.bootsnav {
 
   nav.navbar.bootsnav .navbar-toggle {
     display: inline-block;
-    float: left;
-    margin-right: -200px;
+    float: unset;
+    margin-right: -1rem;
     margin-top: 15px;
   }
 
