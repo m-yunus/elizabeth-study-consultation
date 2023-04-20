@@ -6203,3 +6203,80 @@ margin-bottom: 14px;
   color: #f0f0f0;
 }
 /* ADVERTISERS SERVICE CARD ENDED */
+.pb-90 {
+  padding-bottom: 90px;
+}
+.pt-130 {
+  padding-top: 130px;
+}
+.advertise-item.bg-two {
+  background: #1ebeb6;
+}
+.advertise-item {
+ 
+  padding: 32px 45px 40px;
+
+  display: flex;
+
+
+  
+  flex-direction: column;
+}
+.mis{
+  background-color: #b2dad985;
+}
+.card1 {
+  display: block;
+  position: relative;
+  
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+  .card1::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background:#36cad6;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  .card1:hover:before {
+    transform: scale(21);
+  }
+  .card1:hover p{
+   
+      transition: all 0.3s ease-out;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .card1:hover  h3 {
+      transition: all 0.3s ease-out;
+      color: #ffffff;
+    }
+    .card1:hover .vision-container h3{
+      color: black;
+    }
+    .team-flex{
+      justify-content: space-around;
+    }
+    .top-bar-area .social li:hover{
+      background-color: #02c1ae;
+  
+    }
+    .top-bar-area .social li:hover i{
+      color: white;
+    }
+    #pop{
+      font-family: 'Poppins', sans-serif;
+    }
