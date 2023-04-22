@@ -5868,7 +5868,7 @@ ul.social > li > a {
     border-radius: 3rem;
 }
 .top-pop{
-   font-family: 'Poppins';
+  font-family: Inter, sans-serif;
 }
 .top-pop ul li a{
   text-decoration: none;
@@ -6278,7 +6278,7 @@ margin-bottom: 14px;
       color: white;
     }
     #pop{
-      font-family: 'Poppins', sans-serif;
+      font-family: Inter, sans-serif;
       font-size: 13px;
 
     }
@@ -6291,6 +6291,7 @@ margin-bottom: 14px;
     justify-content: space-around;
     }
     #reg-req{
+      color: #04af9e;
       padding: 1rem 4rem 2rem
     }
     .list-style ul li{
@@ -6350,4 +6351,6 @@ margin-bottom: 14px;
     .faq-item.open .faq-answer {
       display: block;
     }
-    
+    .center-support{
+      justify-content: center;
+    }
