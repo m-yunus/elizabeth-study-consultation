@@ -5873,9 +5873,9 @@ ul.social > li > a {
 .top-pop ul li a{
   text-decoration: none;
 }
-.choose-us-area{
+/* .choose-us-area{
   padding-bottom: 6rem;
-}
+} */
 .job-container-section{
   display: flex;
   width: 100vw;
@@ -5905,7 +5905,7 @@ padding-bottom: 2rem;
   background-color: #1ebeb6;
   display: flex;
   padding: 2rem;
-  margin-bottom: 8rem;
+  margin-bottom: 60px;
 }
 .item h4{
   margin-top: 2rem;
