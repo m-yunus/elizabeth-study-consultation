@@ -6443,7 +6443,7 @@ margin-bottom: 14px;
     
 
 
-.custom-btn {
+/* .custom-btn {
   width: 180px;
   height: 60px;
   color: #ffffff;
@@ -6459,6 +6459,19 @@ margin-bottom: 14px;
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+} */
+.custom-btn {
+  width: 180px;
+  height: 60px;
+  color: #ffffff;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
 }
 .btn-4 {
@@ -6508,7 +6521,7 @@ margin-bottom: 14px;
 .btn-4 span:before,
 .btn-4 span:after {
   position: absolute;
-  content: "";
+  /* content: ""; */
   left: 0;
   bottom: 0;
   box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
