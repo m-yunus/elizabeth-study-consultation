@@ -4125,7 +4125,7 @@ body,
 .fun-factor-area .fun-fact-items {
   position: relative;
   z-index: 1;
-  padding: 120px 50px;
+  padding: 50px 50px;
 }
 
 .fun-factor-area .fun-fact-items::after {
