@@ -68,6 +68,7 @@ html {
   height: 100%;
   position: relative;
   overflow: visible;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -6631,4 +6632,67 @@ font-size: 14px;
 }
 /* end button hover */
 
- 
+
+.item {
+  opacity: 0;
+  transition: opacity 3s ease, transform 2s ease;
+}
+
+.slide-left {
+  transform: translateX(-200%);
+}
+.slide-right {
+  transform: translateX(200px);
+}
+
+.slide-top {
+  transform: translateY(-100%);
+}
+
+.slide-bottom {
+  transform: translateY(200px);
+}
+
+.item.show {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+.about-area .thumb-box .img-anim{
+  opacity: 0;
+  transition: opacity 3s ease, transform 2s ease;
+}
+.about-area .thumb-box .img-anim.show{
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+.fun-factor-area .fun-fact-items .item{
+opacity: 1;
+}
+.choose-us-area .coose-img{
+  opacity: 0;
+  transition: opacity 3s ease, transform 2s ease;
+}
+.choose-us-area  .coose-img.show{
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+footer .item{
+  opacity: 1;
+}
+.about-area .coose-img{
+  opacity: 0;
+  transition: opacity 3s ease, transform 2s ease;
+}
+.about-area .coose-img.show{
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+.testimonials-area .coose-img{
+  opacity: 0;
+  transition: opacity 3s ease, transform 2s ease;
+}
+.testimonials-area .coose-img.show{
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}

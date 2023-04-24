@@ -356,3 +356,33 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     
   });
 });
+
+
+const items = document.querySelectorAll('.item');
+const images = document.querySelectorAll('.img-anim');
+const thumb=document.querySelectorAll(".coose-img");
+function handleScroll() {
+    items.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (itemTop < windowHeight * 0.75) {
+            item.classList.add('show');
+        }
+    });
+    images.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (itemTop < windowHeight * 0.75) {
+            item.classList.add('show');
+        }
+    });
+    thumb.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (itemTop < windowHeight * 0.75) {
+            item.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', handleScroll);
