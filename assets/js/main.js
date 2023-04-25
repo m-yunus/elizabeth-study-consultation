@@ -361,7 +361,6 @@ accordionItemHeaders.forEach(accordionItemHeader => {
 const items = document.querySelectorAll('.item');
 const images = document.querySelectorAll('.img-anim');
 const thumb=document.querySelectorAll(".coose-img");
-const animation=querySelectorAll(".entr_anim")
 function handleScroll() {
     items.forEach(item => {
         const itemTop = item.getBoundingClientRect().top;
@@ -378,13 +377,6 @@ function handleScroll() {
         }
     });
     thumb.forEach(item => {
-        const itemTop = item.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (itemTop < windowHeight * 0.75) {
-            item.classList.add('show');
-        }
-    });
-    entr-anim.forEach(item => {
         const itemTop = item.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
         if (itemTop < windowHeight * 0.75) {
