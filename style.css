@@ -628,9 +628,9 @@ input {
 }
 
 .btn.btn-light {
-  background: #ffffff none repeat scroll 0 0;
-  border: 2px solid #ffffff;
-  color: #233645;
+  background: #001d4c none repeat scroll 0 0;
+  border: 0px solid #ffffff;
+  color: #ffffff;
 }
 
 .btn.btn-light.border {
@@ -1033,7 +1033,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 }
 
 .site-heading h2::before {
-  background: #1ebeb6 none repeat scroll 0 0;
+  background: #001d4c none repeat scroll 0 0;
   bottom: 0;
   content: "";
   height: 2px;
@@ -4540,7 +4540,7 @@ body,
 }
 
 .blog-area .meta li a i {
-  color: #1ebeb6;
+  color: #001d4c;
 }
 
 .blog-area .item .info .meta ul li img {
@@ -4575,7 +4575,7 @@ body,
   bottom: 30px;
   height: 70px;
   width: 80px;
-  background: #1ebeb6;
+  background: #001d4c;
   text-align: center;
   color: #ffffff;
   font-size: 16px;
@@ -6704,6 +6704,14 @@ footer .item{
   transition: opacity 3s ease, transform 2s ease;
 }
 .item.show {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+.coose-img{
+  opacity: 0;
+  transition: opacity 3s ease, transform 2s ease;
+}
+.coose-img.show{
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
