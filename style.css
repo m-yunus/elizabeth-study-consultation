@@ -6716,3 +6716,9 @@ footer .item{
   transform: translateX(0) translateY(0);
 }
 /* zoom image animattion */
+.solid-thumb .department-items .thumb img{
+  transition: transform 0.3s ease-in-out;
+}
+.solid-thumb .department-items .thumb img:hover{
+  transform: scale(1.2);
+}
