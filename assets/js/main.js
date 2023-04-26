@@ -386,3 +386,11 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
+
+
+
+
+
+
+// circle animating mission vission
+
