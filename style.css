@@ -2371,7 +2371,7 @@ body,
 
 .about-area .info h2 {
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 8px;
 }
 
 .about-area blockquote {
@@ -5875,6 +5875,9 @@ ul.social > li > a {
 }
 .top-pop{
   font-family: Inter, sans-serif;
+  font-size: 15px;
+font-weight: 600;
+  text-transform: uppercase;
 }
 .top-pop ul li a{
   text-decoration: none;
@@ -6488,9 +6491,10 @@ margin-bottom: 14px;
   border: none;
 }
 .btn-4:hover{
-  background: #4dccc6;
+  background-color: #22ad4b;
+  /* background: #4dccc6;
   background: -webkit-linear-gradient(257deg, #4dccc6 0%, #008a83 100%);
-  background: linear-gradient(257deg, #4dccc6 0%, #008a83 100%);
+  background: linear-gradient(257deg, #4dccc6 0%, #008a83 100%); */
 }
 .btn-4 span {
   position: relative;
@@ -6758,4 +6762,17 @@ footer .item{
 }
 .feature-entry-area .item:hover h4{
   color: white;
+}
+.team-default-area .single-item img{
+  transition: transform 0.3s ease-in-out;
+}
+.team-default-area .single-item:hover img{
+  transform: scale(1.09);
+
+}
+.blog-area .single-item .item img{
+  transition: transform 0.3s ease-in-out;
+}
+.blog-area .single-item .item:hover img{
+  transform: scale(1.2);
 }
