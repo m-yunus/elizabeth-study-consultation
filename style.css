@@ -5556,7 +5556,8 @@ body,
 }
 
 .contact-us-area form button {
-  background: linear-gradient(90deg, rgba(30,190,182,1) 0%, rgba(0,130,124,1) 100%);
+  /* background: linear-gradient(90deg, rgba(30,190,182,1) 0%, rgba(0,130,124,1) 100%); */
+  background: #001d4c;
   padding: 12px 35px;
   border-radius: 30px;
   color: #ffffff;
