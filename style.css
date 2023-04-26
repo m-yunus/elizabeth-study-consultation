@@ -3947,7 +3947,8 @@ body,
 }
 
 .team-default-area .item .thumb .contact {
-  background: linear-gradient(90deg, rgba(30,190,182,1) 0%, rgba(0,130,124,1) 100%);
+  /* background: linear-gradient(90deg, rgba(30,190,182,1) 0%, rgba(0,130,124,1) 100%); */
+  background: #001d4c;
   position: absolute;
   left: 50%;
   bottom: -25px;
@@ -3971,7 +3972,7 @@ body,
 }
 
 .team-default-area .item .info span {
-  color: #1ebeb6;
+  color: #001d4c;
   text-transform: capitalize;
   font-weight: 600;
 }
