@@ -4595,7 +4595,7 @@ body,
   right: 0;
   bottom: -10px;
   content: "";
-  border-right: 15px solid #1ebeb6;
+  border-right: 15px solid #001d4c;
   border-top: 0;
   border-bottom: 15px solid transparent;
 }
@@ -5072,7 +5072,7 @@ body,
   position: absolute;
   left: 0;
   top: 11px;
-  content: "";
+  /* content: ""; */
   background: #666666;
   height: 7px;
   width: 7px;
@@ -6289,7 +6289,7 @@ margin-bottom: 14px;
   z-index: 0;
   overflow: hidden;
 }
-  .card1::before{
+  /* .card1::before{
     content: "";
     position: absolute;
     z-index: -1;
@@ -6302,23 +6302,39 @@ margin-bottom: 14px;
     transform: scale(1);
     transform-origin: 50% 50%;
     transition: transform 0.25s ease-out;
-  }
+  } */
 
-  .card1:hover:before {
-    transform: scale(21);
+  .card1:hover{
+    background: #001d4c;
+    color: white;
   }
-  .card1:hover p{
+  
+
+  .card1:hover .vision-container p{
    
-      transition: all 0.3s ease-out;
-      color: rgba(255, 255, 255, 0.8);
+     color: white;
     }
-    .card1:hover  h3 {
-      transition: all 0.3s ease-out;
-      color: #ffffff;
+    .card1:hover .vision-container h3 {
+    
+    color: white;
     }
-    .card1:hover .vision-container h3{
-      color: black;
+    .card2 p{
+      color: white;
     }
+    .card2 h3{
+      color: white;
+    }
+    .card2:hover{
+      background-color: white;
+    }
+    .card2:hover p{
+   
+      color:#001d4c;
+     }
+     .card2:hover h3 {
+     color:#001d4c;
+
+     }
     .team-flex{
       justify-content: space-around;
     }
@@ -6342,12 +6358,13 @@ margin-bottom: 14px;
     gap: 14px;
     justify-content: space-around;
     }
+   
     #reg-req{
       color: #04af9e;
       padding: 1rem 4rem 2rem
     }
     .list-style ul li{
-      list-style: disc;
+      list-style: none;
       
     }
     .faq-section {
@@ -6775,4 +6792,17 @@ footer .item{
 }
 .blog-area .single-item .item:hover img{
   transform: scale(1.2);
+}
+.infos{
+  padding: 5px 30px 30px;
+}
+.infos .description{
+  border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #7A7A7A57;
+}
+
+
+.infos .readmore{
+  padding-top: 20px;
 }
