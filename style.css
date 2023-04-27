@@ -4353,7 +4353,7 @@ body,
 =================================================================== */
 
 .gallery-area {
-  padding-bottom: 105px;
+  padding-bottom: 50px;
 }
 
 .gallery-area .magnific-mix-gallery {
@@ -6852,5 +6852,5 @@ footer .item{
     display: flex;
     width: 100%;
     justify-content: center;
-    padding-bottom: 30px;
+    
   }
