@@ -3661,6 +3661,18 @@ body,
   background-repeat: no-repeat;
   opacity: 0.2;
 }
+.choose-us-area .abt .info-box::after{
+  position: absolute;
+  right: -120px;
+  top: -120px;
+  content: "";
+  height: 300px;
+  width: 300px;
+  background: url(assets/img/shape/dotted-shape.png);
+  z-index: -1;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
 
 .choose-us-area.shape-less .info .info-box::after {
   display: none;
@@ -5565,7 +5577,10 @@ body,
   font-weight: 700;
   margin-top: 15px;
 }
-
+.contact-us-area form button:hover{
+  color: #001d4c;
+  background-color: #22ad4b;
+}
 .contact-us-area .address-items .item li {
   border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
   margin-bottom: 10px;
@@ -6152,7 +6167,9 @@ margin-bottom: 14px;
   width: 100%;
   height: 100%;
   /* background: linear-gradient(#20c997, rgb(16, 123, 195)); */
-  background: linear-gradient(#20c99787, rgb(16 123 195 / 85%));
+  background: #001d4c;
+  background: -webkit-linear-gradient(105deg, #001d4c 0%, #234baf 100%);
+  background: linear-gradient(105deg, #001d4c 0%, #234baf 100%);
 
   position: absolute;
   left: 0%;
@@ -6175,7 +6192,9 @@ margin-bottom: 14px;
   position: relative;
   z-index: 2;
   overflow: hidden;
-  background: linear-gradient(#20c99787, rgb(16 123 195 / 85%));
+  background: #001d4c;
+background: -webkit-linear-gradient(105deg, #001d4c 0%, #234baf 100%);
+background: linear-gradient(105deg, #001d4c 0%, #234baf 100%);
 
 }
 .advertisers-service-sec .service-card-odd::after{
@@ -6289,7 +6308,7 @@ margin-bottom: 14px;
   z-index: 0;
   overflow: hidden;
 }
-  /* .card1::before{
+  .card1::before{
     content: "";
     position: absolute;
     z-index: -1;
@@ -6302,39 +6321,23 @@ margin-bottom: 14px;
     transform: scale(1);
     transform-origin: 50% 50%;
     transition: transform 0.25s ease-out;
-  } */
-
-  .card1:hover{
-    background: #001d4c;
-    color: white;
   }
-  
 
-  .card1:hover .vision-container p{
+  .card1:hover:before {
+    transform: scale(21);
+  }
+  .card1:hover p{
    
-     color: white;
+      transition: all 0.3s ease-out;
+      color: rgba(255, 255, 255, 0.8);
     }
-    .card1:hover .vision-container h3 {
-    
-    color: white;
+    .card1:hover  h3 {
+      transition: all 0.3s ease-out;
+      color: #ffffff;
     }
-    .card2 p{
-      color: white;
+    .card1:hover .vision-container h3{
+      color: black;
     }
-    .card2 h3{
-      color: white;
-    }
-    .card2:hover{
-      background-color: white;
-    }
-    .card2:hover p{
-   
-      color:#001d4c;
-     }
-     .card2:hover h3 {
-     color:#001d4c;
-
-     }
     .team-flex{
       justify-content: space-around;
     }
@@ -6806,3 +6809,48 @@ footer .item{
 .infos .readmore{
   padding-top: 20px;
 }
+.vis-mis-img{
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+  @keyframes heartbeat {
+    from {
+      transform: scale(1);
+      transform-origin: center center;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      transform: scale(0.91);
+      animation-timing-function: ease-in;
+    }
+    17% {
+      transform: scale(0.98);
+      animation-timing-function: ease-out;
+    }
+    33% {
+      transform: scale(0.87);
+      animation-timing-function: ease-in;
+    }
+    45% {
+      transform: scale(1);
+      animation-timing-function: ease-out;
+    }
+  }
+  
+
+  .advertisers-service-sec .service-card .icon-wrapper img{
+    height: 50px;
+  }
+  .btn{
+   background-color:  #001d4c;
+   color:white;
+  }
+  .btn:hover{
+    background-color: #22ad4b;
+    color: #001d4c;
+  }
+  .button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
