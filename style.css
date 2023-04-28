@@ -6854,3 +6854,129 @@ footer .item{
     justify-content: center;
     
   }
+  .blog-area  table {
+    /* border: 1px solid #ccc; */
+    /* border-collapse: collapse; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border: solid #f7f7f7 2px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  }
+  
+  .blog-area   table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  .blog-area  table tr {
+    background-color: #fff;
+    border: 1px solid #e1e5e9;
+    padding: .35em;
+    border-radius: 3px;
+  }
+  .blog-area  table thead tr:first-child {
+      border: 1px solid #0f82e6;
+  }
+  .blog-area table th,
+  .blog-area table td {
+    padding: 1.625em;
+    text-align: center;
+    color: #001d4c;
+    font-size: 14px;
+    font-family: cursive;
+  }
+  
+  .blog-area  table td:nth-child(4) {
+    font-size: 18px;
+  }
+  
+ .blog-area table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background: #001d4c;
+    color: #FFF;
+  }
+  
+  table tbody tr td .btn-invoice {
+    background: #001d4c;
+    color: #FFF;
+    border-radius: 8px;
+    font-size: 13px;
+    padding: 10px 20px;
+    border: 0;
+    font-weight: bolder;
+    font-family: Inter, sans-serif;
+  }
+  table tbody tr td .btn-invoice:hover{
+    background: #22ad4b;
+    color: #001d4c;
+  }
+  
+  .blog-area  tbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+  
+  .blog-area  tbody tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+    table caption {
+      font-size: 1.3em;
+    }
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      position: absolute;
+      width: 1px;
+      padding: 0;
+    }
+    table tr {
+      border-bottom: 3px solid #e1e5e9;
+      display: block;
+      margin-bottom: .625em;
+    }
+    table th,
+    table td {
+      padding: 0.625em;
+    }
+    table td {
+      border-bottom: 1px solid #e1e5e9;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+      color: #9da9b9;
+    }
+    table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #656971;
+    }
+    table td:last-child {
+      border-bottom: 0;
+    }
+    table td:nth-child(4) {
+      font-size: 0.8em;
+    }}
+    .gallery-area h2{
+      display: inline-block;
+      font-weight: 600;
+      padding-bottom: 20px;
+      margin-bottom: 0;
+      position: relative;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+    }
