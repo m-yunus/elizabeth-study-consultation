@@ -6980,3 +6980,41 @@ footer .item{
       text-transform: capitalize;
       letter-spacing: 1px;
     }
+    @media screen and (max-width:596px) {
+      .department-area .item-box .item{
+        padding: 0;
+      }
+    }
+    .name h4,h6{
+      margin-bottom: 0px;
+    }
+    .name{
+      text-align: center;
+    }
+
+    @media screen and (max-width:596px) {
+      .coose-img{
+        opacity: 1;
+        transition: none;
+      }
+      .coose-img.show{
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+      }
+      .slide-left {
+        transform: translateX(0) translateY(0);
+      }
+      .slide-right {
+        transform: translateX(0) translateY(0);
+      }
+      
+      .slide-top {
+        transform: translateX(0) translateY(0);
+      }
+      
+      .slide-bottom {
+        transform: translateX(0) translateY(0);
+      }
+      
+
+    }
