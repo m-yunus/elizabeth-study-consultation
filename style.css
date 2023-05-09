@@ -6887,7 +6887,7 @@ footer .item{
     text-align: center;
     color: #001d4c;
     font-size: 14px;
-    font-family: cursive;
+    /* font-family: cursive; */
   }
   
   .blog-area  table td:nth-child(4) {
