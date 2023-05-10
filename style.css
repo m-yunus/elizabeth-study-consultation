@@ -4073,6 +4073,7 @@ body,
   border-radius: 50%;
   height: 80px;
   width: 80px;
+  border: 1px solid #001d4c;
   margin-right: 15px;
   margin: auto auto 30px;
 }
