@@ -26,6 +26,7 @@
     <link href="assets/css/bootsnav.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/popup.css" rel="stylesheet">
     <!-- ========== End Stylesheet ========== -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -354,14 +355,14 @@
                     </div>
                     <div class="col-lg-3 col-md-6 item">
                         <div class="fun-fact">
-                            <div class="timer face" data-to="5" data-speed="5000"><i class=""
+                            <div class="timer " data-to="120" data-speed="5000"><i class=""
                                     style="color: #ffffff;"></i></div>
                             <span class="medium">Facebook reviews</span>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 item">
                         <div class="fun-fact">
-                            <div class="timer face" data-to="4.5" data-speed="5000"></div>
+                            <div class="timer " data-to="150" data-speed="5000"></div>
                             <span class="medium">Google Reviews</span>
                         </div>
                     </div>
@@ -568,6 +569,21 @@
 
     </div>
     <!-- End Feature Entry Area -->
+     <!-- Start Fun Factor Area
+    ============================================= -->
+    <div class="fun-factor-area half-bg-light-bottom bg-gray default-padding-bottom">
+        <div class="container" style="max-width: none;">
+            <div class="fun-fact-items  text-light text-center" style="background-color: #001d4c;">
+                <div class="row" style="justify-content: center;">
+                    <div class="brochure ">
+                        <h6><strong>Download Our Brochure</strong> </h6>
+                        <a class="btn btn-sm btn-light effect" id="btnOpenForm"><i class="fa fa-download" style="font-size:19px;background: none;"></i><strong>Download</strong>  </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Fun Factor Area -->
     <!-- table starts -->
     <div class="blog-area bottom-less bg-gray default-padding">
         <div class="container">
@@ -1053,7 +1069,7 @@
                     <div class="heading">
                         <h5 class="coose-img slide-left">Testimonials</h5>
                         <h2 class="coose-img slide-right">Whay people says <br> about our services</h2>
-                        <a class="btn btn-sm btn-light effect coose-img slide-top" href="#">View All</a>
+                        <a class="btn btn-sm btn-light effect coose-img slide-top" href="testimonial.html">View All</a>
                     </div>
                 </div>
                 <div class="col-lg-8 ">
@@ -1449,7 +1465,7 @@
                             align-content: center;
                             justify-content: center;
                             align-items: center;
-                            flex-direction: row;" href="#"> <span>View All</span>
+                            flex-direction: row;" href="gallery.html"> <span>View All</span>
                                     </a></button>
                             </div>
 
@@ -1462,6 +1478,29 @@
     </div>
     <!-- End Gallery -->
 
+    <div class="form-popup-bg">
+        <div class="form-container">
+          <button id="btnCloseForm" class="close-button">X</button>
+          <h1>Contact Us</h1>
+          <p>For more information. Please complete this form.</p>
+          <form action="">
+            <div class="form-group">
+              <label for="">Name</label>
+              <input type="text" class="form-control" />
+            </div>
+            
+            <div class="form-group">
+              <label for="">E-Mail Address</label>
+              <input class="form-control" type="text" />
+            </div>
+            <div class="form-group">
+              <label for="">Phone Number</label>
+              <input class="form-control" type="text" />
+            </div>
+            <button ><a class="btn btn-sm btn-light effect " href="#">Submit</a></button>
+          </form>
+        </div>
+      </div>
     <!-- Start Footer 
     ============================================= -->
     <footer class="bg-dark text-light">
@@ -1531,8 +1570,13 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="brochure">
+                            <h6><strong>Download Our Brochure</strong> </h6>
+                            <a class="btn btn-sm btn-light effect" id="btnOpenForm"><i class="fa fa-download" style="font-size:19px;background: none;"></i><strong>Download</strong>  </a>
+                        </div>
                     </div>
-
+                  
+                        
                     <div class="single-item col-lg-2 col-md-6 item">
                         <div class="f-item link">
                             <h4 class="widget-title">QuickLinks</h4>
@@ -1555,6 +1599,7 @@
                                 </li>
                             </ul>
                         </div>
+                       
                     </div>
 
                     <div class="single-item col-lg-4 col-md-6 item">
@@ -1639,6 +1684,10 @@
         </div>
         <!-- End Footer Bottom -->
     </footer>
+    <a href="https://api.whatsapp.com/send?phone=9745560452&text=Hi Elizabeth" class="whatsapp-button"
+    target="_blank" >
+    <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="botão whatsapp" />
+  </a>
     <!-- End Footer -->
 
     <!-- jQuery Frameworks
@@ -1658,7 +1707,8 @@
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+   
 </body>
 
 </html>

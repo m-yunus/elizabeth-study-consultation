@@ -3984,9 +3984,10 @@ body,
 }
 
 .team-default-area .item .info span {
-  color: #001d4c;
-  text-transform: capitalize;
-  font-weight: 600;
+  color: #1ebeb6;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 12px;
 }
 
 
@@ -7019,3 +7020,29 @@ footer .item{
       
 
     }
+.team-area .container img{
+  height: 18rem;
+  width: 18rem;
+  object-fit: cover;
+}
+@media screen and (min-width:992px) {
+  .team-single{
+    max-width: 26%;
+  }
+}
+.whatsapp-button{
+  position: fixed;
+  z-index: 999;
+    right: 17px;
+    bottom: 11px
+}
+.brochure{
+  
+  width: 16rem;
+  display: flex;
+
+  gap: 1rem;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: center;
+}
