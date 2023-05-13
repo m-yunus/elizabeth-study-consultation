@@ -3258,6 +3258,7 @@ ul.cart-list > li.total > .btn {
 
   nav.navbar.navbar-sticky .navbar-brand {
     top: 0;
+    right: 22px;
   }
 
   nav.navbar.navbar-sidebar .navbar-brand {

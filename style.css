@@ -7029,6 +7029,7 @@ footer .item{
   .team-single{
     max-width: 26%;
   }
+  
 }
 .whatsapp-button{
   position: fixed;
@@ -7045,4 +7046,21 @@ footer .item{
   flex-direction: column;
   align-content: stretch;
   align-items: center;
+}
+.button-div{
+ 
+    width: 100%;
+  
+    display: flex;
+  
+}
+@media screen and (max-width:992px) {
+  .button-div{
+   
+    justify-content: center;
+    
+  }
+ #speciality {
+    text-align: right;
+  }
 }

@@ -418,8 +418,24 @@ function closeForm() {
     
     
     });
-  
-    function SendForm(){
-       
-    }
-   
+
+   function SendForm(){
+        const params={
+            from_name : document.getElementById("name").value,
+            email_id : document.getElementById("email").value,
+            message : "name :" +document.getElementById("name").value +"<br> phone :"+document.getElementById("phone").value
+        }
+    emailjs.send("service_cpw3hgj","template_tmxqj56",params.then(function(res){
+        alert("success"+res.status);
+    }))
+        
+      };
+
+
+            // function SendForm(){
+            //     emailjs.send("service_y2dzz7y","template_tmxqj56",{  
+            //         name: document.getElementById("name").value ,
+            //         phone: document.getElementById("phone").value,
+            //         email: document.getElementById("email").value
+            //         });
+            // }

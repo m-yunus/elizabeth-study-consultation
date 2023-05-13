@@ -39,7 +39,13 @@
     <!-- ========== Google Fonts ========== -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap"
         rel="stylesheet">
-
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('8L1Z644teVNexVV89');
+            })();
+        </script>
 </head>
 
 <body>
@@ -425,8 +431,8 @@
                             <h5>Unparalleled expertise</h5>
                         </li>
                     </ul> -->
-
-                        <button type="button" class="btn apply effect-hover  custom-btn btn-4 coose-img slide-bottom"
+                        <div class="button-div">
+                            <button type="button" class="btn apply effect-hover  custom-btn btn-4 coose-img slide-bottom"
                             style="display: flex;
                     justify-content: center;margin-top: 8px;
                     align-items: center;"> <a class=" " style="color: #ffffff;display: flex;
@@ -437,6 +443,8 @@
                         flex-direction: row;" href="about-us.html"><i class="fas fa-angle-right"></i> <span>Read
                                     More</span>
                             </a></button>
+                        </div>
+                        
                 </div>
 
             </div>
@@ -590,7 +598,7 @@
             <div class="row">
 
 
-                <table>
+                <table class="table-career">
                     <thead>
                         <tr>
                             <th><label>
@@ -607,22 +615,22 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="Speciality">MED SURG, ED, OTA11289678234</td>
-                            <td data-label="Trust">Swansea Bay UHB</td>
+                            <td data-label="Speciality" ><p id="speciality">MED SURG, ED, OTA11289678234</p></td>
+                            <td data-label="Trust" id="speciality">Swansea Bay UHB</td>
 
-                            <td data-label="Apply"><button class="btn-invoice">Apply </button></td>
+                            <td data-label="Apply" id="speciality"><button class="btn-invoice">Apply </button></td>
                         </tr>
                         <tr>
-                            <td data-label="Speciality">Medical Surgical Nurses for USA</td>
-                            <td data-label="Trust">Barnes-Jewish Hospital</td>
+                            <td data-label="Speciality"><p id="speciality">Medical Surgical Nurses for USA</p> </td>
+                            <td data-label="Trust" id="speciality">Barnes-Jewish Hospital</td>
 
-                            <td data-label="Apply"><button class="btn-invoice">Apply</button></td>
+                            <td data-label="Apply" id="speciality"><button class="btn-invoice">Apply</button></td>
                         </tr>
                         <tr>
-                            <td data-label="Speciality">Med Surg, OT, Paeds</td>
-                            <td data-label="Trust">Princess Alexandra Hospital NHS Foundation Trust</td>
+                            <td data-label="Speciality" id="speciality"><p> Med Surg, OT, Paeds</p></td>
+                            <td data-label="Trust" id="speciality">Princess Alexandra Hospital NHS Foundation Trust</td>
 
-                            <td data-label="Apply"><button class="btn-invoice">Apply</button></td>
+                            <td data-label="Apply" id="speciality"><button class="btn-invoice">Apply</button></td>
                         </tr>
 
                     </tbody>
@@ -1481,23 +1489,24 @@
     <div class="form-popup-bg">
         <div class="form-container">
           <button id="btnCloseForm" class="close-button">X</button>
+
           <h1>Contact Us</h1>
           <p>For more information. Please complete this form.</p>
-          <form action="">
+          <form action="" onsubmit="SendForm()">
             <div class="form-group">
               <label for="">Name</label>
-              <input type="text" class="form-control" />
+              <input type="text" id="name" class="form-control" />
             </div>
             
             <div class="form-group">
               <label for="">E-Mail Address</label>
-              <input class="form-control" type="text" />
+              <input class="form-control" id="email" type="text" />
             </div>
             <div class="form-group">
               <label for="">Phone Number</label>
-              <input class="form-control" type="text" />
+              <input class="form-control" id="phone" type="text" />
             </div>
-            <button ><a class="btn btn-sm btn-light effect " href="#">Submit</a></button>
+            <button type="submit"><a class="btn btn-sm btn-light effect " >Submit</a></button>
           </form>
         </div>
       </div>
@@ -1708,6 +1717,7 @@
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"> </script>
+    
    
 </body>
 
