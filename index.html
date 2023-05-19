@@ -35,7 +35,7 @@
       <script src="assets/js/html5/html5shiv.min.js"></script>
       <script src="assets/js/html5/respond.min.js"></script>
     <![endif]-->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- ========== Google Fonts ========== -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap"
         rel="stylesheet">
@@ -1492,19 +1492,19 @@
 
           <h1>Contact Us</h1>
           <p>For more information. Please complete this form.</p>
-          <form action="" onsubmit="SendForm()">
+          <form id="submit-form">
             <div class="form-group">
               <label for="">Name</label>
-              <input type="text" id="name" class="form-control" />
+              <input type="text" id="name" name="name" class="form-control" required />
             </div>
             
             <div class="form-group">
               <label for="">E-Mail Address</label>
-              <input class="form-control" id="email" type="text" />
+              <input class="form-control" id="email" name="email" type="email" required/>
             </div>
             <div class="form-group">
               <label for="">Phone Number</label>
-              <input class="form-control" id="phone" type="text" />
+              <input class="form-control" id="phone" name="phone" type="text" required />
             </div>
             <button type="submit"><a class="btn btn-sm btn-light effect " >Submit</a></button>
           </form>
@@ -1579,10 +1579,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="brochure">
-                            <h6><strong>Download Our Brochure</strong> </h6>
-                            <a class="btn btn-sm btn-light effect" id="btnOpenForm"><i class="fa fa-download" style="font-size:19px;background: none;"></i><strong>Download</strong>  </a>
-                        </div>
+                       
                     </div>
                   
                         
@@ -1693,7 +1690,7 @@
         </div>
         <!-- End Footer Bottom -->
     </footer>
-    <a href="https://api.whatsapp.com/send?phone=9745560452&text=Hi Elizabeth" class="whatsapp-button"
+    <a href="https://api.whatsapp.com/send?phone=919400036715&text=Hi%2C%20can%20I%20know%20more%20about%20free%20NHS%20recruitment%3F" class="whatsapp-button"
     target="_blank" >
     <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="botão whatsapp" />
   </a>
@@ -1718,7 +1715,28 @@
     <script src="assets/js/main.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"> </script>
     
-   
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwsh2KZqgsqufmcZklAFiVfuP0kI1CUvdnMY2yDtazyNtUaw-ZhXyvH0IAO7E4mUw1A0Q/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                     alert("Form submitted successfully")
+                     window.open("assets/img/New folder/broucher (1).pdf")
+                     window.location.reload()
+                    
+                    // window.location.href="assets\img\New folder\broucher (1).pdf"
+                    
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
