@@ -6995,6 +6995,9 @@ footer .item{
     }
 
     @media screen and (max-width:596px) {
+      #reg-req{
+        padding: 0px;
+      }
       .coose-img{
         opacity: 1;
         transition: none;
