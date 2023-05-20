@@ -6983,6 +6983,11 @@ footer .item{
       letter-spacing: 1px;
     }
     @media screen and (max-width:596px) {
+      .reg-ul{
+        gap:0px;
+        padding: 0px;
+        justify-content: flex-start;
+      }
       .department-area .item-box .item{
         padding: 0;
       }
