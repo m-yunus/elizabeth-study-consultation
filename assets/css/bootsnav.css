@@ -2379,7 +2379,7 @@ nav.navbar.bootsnav {
   }
 
   .navbar-brand > img {
-    height: 40px !important;
+    height: 40px ;
   }
 
   nav.navbar.bootsnav.navbar-transparent.pad-top {
@@ -3266,7 +3266,7 @@ ul.cart-list > li.total > .btn {
   }
 
   nav.navbar .navbar-brand img.logo {
-    height: 30px;
+    height: 58px;
   }
 
   .attr-nav > ul > li > a {
