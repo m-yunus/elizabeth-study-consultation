@@ -223,7 +223,7 @@
                             We are recruiting qualified nurses to hospitals and clinics all over the United Kingdom
                         </p>
                         <button type="button" style="height: 45px;" class="btn apply effect-hover  custom-btn btn-4"><a
-                                href="Careers.html" style="color: white;">Apply Now</a> </button>
+                            id="btnOpenApplyForm" style="color: white;">Apply Now</a> </button>
                        
                     </div>
                     <div class="col-lg-6 thumb">
@@ -519,27 +519,27 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="Speciality" ><p id="speciality">MED SURG, ED, OTA11289678234</p></td>
-                            <td data-label="Trust" id="speciality">Swansea Bay UHB</td>
-
-                            <td data-label="Apply" id="speciality"><button class="btn-invoice">Apply </button></td>
-                        </tr>
-                        <tr>
-                            <td data-label="Speciality"><p id="speciality">Medical Surgical Nurses for USA</p> </td>
-                            <td data-label="Trust" id="speciality">Barnes-Jewish Hospital</td>
-
-                            <td data-label="Apply" id="speciality"><button class="btn-invoice">Apply</button></td>
-                        </tr>
-                        <tr>
-                            <td data-label="Speciality" id="speciality"><p> Med Surg, OT, Paeds</p></td>
-                            <td data-label="Trust" id="speciality">Princess Alexandra Hospital NHS Foundation Trust</td>
-
-                            <td data-label="Apply" id="speciality"><button class="btn-invoice">Apply</button></td>
-                        </tr>
-
-                    </tbody>
+                            <td data-label="Speciality" id="speciality">Vacancies to all departments</td>
+                            <td data-label="Trust" id="speciality">Shrewsbury and Telford NHS foundation trust </td>
+                        
+                            <td data-label="Apply" id="speciality"><button class="btn-invoice" onclick="openModal()"  id="btnOpenApplyForm"><a  style="color: #ffffff;" > Apply</a></button></td>
+                          </tr>
+                            
+                           <tr>
+                            <td data-label="Speciality" id="speciality">Vacancies to all departments</td>
+                            <td data-label="Trust" id="speciality">North West Anglia NHS foundation trust</td>
+                        
+                            <td data-label="Apply" id="speciality"><button class="btn-invoice" onclick="openModal()">Apply</button></td>
+                          </tr>
+                            
+                           <tr>
+                            <td data-label="Speciality" id="speciality">Vacancies to all departments</td>
+                            <td data-label="Trust" id="speciality">All University Hospitals in Wales</td>
+                        
+                            <td data-label="Apply" id="speciality"><button class="btn-invoice" onclick="openModal()">Apply</button></td>
+                          </tr>
+                 </tbody>
                 </table>
-
             </div>
             <div class="button" style="    padding-top: 2rem;
             padding-bottom: 2rem;">
@@ -1055,7 +1055,7 @@
         </div>
     </div>
     <!-- End Gallery -->
-
+ <!-- brochure starts -->
     <div class="form-popup-bg">
         <div class="form-container">
           <button id="btnCloseForm" class="close-button">X</button>
@@ -1080,6 +1080,46 @@
           </form>
         </div>
       </div>
+      <!-- brochure ends -->
+
+      <div class="form-apply"  >
+        <div class="form-container">
+          <button id="btnApplyCloseForm" class="close-button">X</button>
+
+          <h1>We Are Ready To Help Your Future</h1>
+          <p> Please complete this form.</p>
+          <form id="apply-form">
+            <div class="form-group">
+              <label for="">Name</label>
+              <input type="text" id="name" name="name" class="form-control" required />
+            </div>
+            
+            <div class="form-group">
+              <label  for="">E-Mail Address</label>
+              <input class="form-control" id="email" name="email" type="email" required/>
+            </div>
+            <div class="form-group">
+              <label for="">Phone Number</label>
+              <input class="form-control" id="phone" name="phone" type="text" required />
+            </div>
+            <div class="form-group">
+                <label for="">IELTS / OET Status </label>
+
+                <select name="ielts/oet-status" id="" required >
+                    <option value=""  >Select an Option</option>
+                    <option value="Passed">Passed</option>
+                    <option value="Waiting for Result">Waiting For Result </option>
+                    <option value="Preparing">Preparing</option>
+                </select>
+                
+              
+                </div>
+            <button type="submit"><a class="btn btn-sm btn-light effect " >Submit</a></button>
+          </form>
+        </div>
+      </div>
+
+
     <!-- Start Footer 
     ============================================= -->
     <footer class="bg-dark text-light">
@@ -1133,7 +1173,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="#"> Overseas Educationt</a>
+                                    <a href="#"> Overseas Education</a>
                                 </li>
                                 <li>
                                     <a href="ielts-oet.html"> IELTS & OET</a>
@@ -1145,7 +1185,7 @@
 
 
                                 <li>
-                                    <a href="registration-guidelines.html"> registration-guidelines</a>
+                                    <a href="registration-guidelines.html"> Registration-guidelines</a>
                                 </li>
                             </ul>
                         </div>
@@ -1161,7 +1201,7 @@
                                     <a href="index.html">Home</a>
                                 </li>
                                 <li>
-                                    <a href="about-us.html">About US</a>
+                                    <a href="about-us.html">About Us</a>
                                 </li>
                                 <li>
                                     <a href="blog-standard.html">News</a>
@@ -1216,11 +1256,7 @@
                                     </li>
                                     <li> <span>Elizabeth International India
 
-                                            Mareena Towers, Pala,
-
-                                            Kottayam - 686575
-
-                                            Kerala, India <br></span></li>
+                                        14/201, KANNUMKALATHIL, RAMAPURAM, RAMAPURAM, Kottayam, Kerala, India, 686576 <br></span></li>
                                 </ul>
                             </div>
                         </div>
@@ -1306,6 +1342,31 @@
                 }
             })
         })
+        $("#apply-form").submit((e)=>{
+            e.preventDefault()
+            var ieltsOetStatus = $("#apply-form select[name='ielts/oet-status']").val();
+  
+  // Prepare the form data
+ var ieltsOetStatus = $("#apply-form select[name='ielts/oet-status']").val();
+    $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbx-IRVs_WC1ychVgcxodbEKQB6Tobt44rbfJpua1tUwhvS5K-oyYa4sMJF1lfPO5WqA/exec",
+                data:$("#apply-form").serialize() + ieltsOetStatus,
+                method:"post",
+                success:function (response){
+                     alert("Form submitted successfully")
+                    
+                     window.location.reload()
+                    
+                    
+                    
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+
     </script>
 </body>
 

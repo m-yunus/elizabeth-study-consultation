@@ -7072,3 +7072,80 @@ footer .item{
     text-align: right;
   }
 }
+details {
+  position:relative;
+}
+details summary {
+  display:block;
+  cursor: pointer;
+  color: #000000;
+}
+details summary:focus {
+  outline:none;
+}
+details[open] {
+  display:block;
+  padding-bottom:25px;
+  padding-top:10px;
+  animation: open .2s linear;
+}
+details[open] summary {
+  position:absolute;
+  bottom: 0;
+  left:0;
+}
+
+details #open{padding-left:5px;text-align:middle;}
+details #open:after{
+    display: inline-block;
+    position:relative;
+    top: -3px;
+    padding-left: 8px;
+    content: "\00bb";
+    transform: rotate(90deg);
+}
+details[open] #open{display:none;}
+details #close{display:none;}
+details[open] #close{display:block;}
+
+::-webkit-details-marker {display: none;}
+
+
+
+
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.radio-group {
+  display: flex; /* Display the radio buttons in a row */
+  align-items: center;
+  gap: 25px; /* Add space between the buttons */
+}
+.radio-group input{
+  cursor: pointer;
+}
+
+#option-apply{
+  color: #000000;
+}
+.nice-select .option.focus, .nice-select .option.selected.focus{
+  color: #001d4c;
+}
+.nice-select .option{
+  color: #001d4c;
+  font-weight: bolder;
+}
+.nice-select{
+  font-weight: bolder;
+  color: #002359;
+}

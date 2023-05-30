@@ -418,6 +418,35 @@ function closeForm() {
     
     
     });
+    function closeForm() {
+        $('.form-apply').removeClass('is-visible');
+      }
+      
+      $(document).ready(function($) {
+        
+        /* Contact Form Interactions */
+        $('#btnOpenApplyForm').on('click', function(event) {
+         
+      
+          $('.form-apply').addClass('is-visible');
+        });
+        
+          //close popup when clicking x or off popup
+        $('.form-apply').on('click', function(event) {
+          if ($(event.target).is('.form-apply') || $(event.target).is('#btnApplyCloseForm')) {
+       
+            $(this).removeClass('is-visible');
+          }
+        });
+        
+        
+        
+        });
+
+        function openModal() {
+           let modal = document.querySelector('.form-apply');
+            modal.classList.add('is-visible');
+          }
 
    function SendForm(){
         const params={
