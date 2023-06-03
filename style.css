@@ -4505,7 +4505,7 @@ body,
 }
 
 .blog-area .item .info {
-  background: #ffffff;
+  /* background: #ffffff; */
   padding: 30px;
 }
 
@@ -7148,4 +7148,35 @@ details[open] #close{display:block;}
 .nice-select{
   font-weight: bolder;
   color: #002359;
+}
+.service-about{
+  display: flex;
+  align-items: center;
+}
+.feature-item{
+display: flex;
+}
+
+.feature-item .icon {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 25px;
+  color: #204ecf;
+  width: 34px;
+  height: 34px;
+  background: #f7f7f7;
+  line-height: 34px;
+  border-radius: 50%;
+  text-align: center;
+}
+.feat{
+  display: flex;
+  align-items: center;
+}
+.about-features h5{
+font-weight: 600;
+}
+.about-img{
+  height: 32rem;
 }

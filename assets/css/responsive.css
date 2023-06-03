@@ -550,7 +550,7 @@
   }
 
   .banner-area p {
-    padding: 0;
+    padding: 14px;
   }
 
   body, .banner-area, .banner-area div {
@@ -577,7 +577,7 @@
   }
 
   .banner-area.text-default h2 {
-    font-size: 33px;
+    font-size: 28px;
   }
 
   .banner-area.inc-shape .content::after {
