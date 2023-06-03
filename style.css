@@ -4506,8 +4506,14 @@ body,
 
 .blog-area .item .info {
   /* background: #ffffff; */
-  padding: 30px;
+  padding: 60px;
 }
+@media screen and (max-width:700px) {
+  .blog-area .item .info{
+    padding: 0;
+  }
+}
+
 
 .blog-area .single-item .info h4 {
   line-height: 1.3;
