@@ -561,104 +561,113 @@ const firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   
-  // Access Firestore
-var db = firebase.firestore();
-var testimonialForm = document.getElementById('testimonialForm');
-var testimonialsSection = document.getElementById('testimonials');
 
-// Function to add a testimonial to Firestore
-function addTestimonialToFirestore(testimonial) {
-  return db.collection('testimonials').add(testimonial);
-}
+    
 
-// Function to render testimonials on the frontend
-function renderTestimonials(testimonials) {
-  testimonialsSection.innerHTML = '';
+    // Get a reference to the testimonials container element
+    const testimonialsContainer = document.getElementById('testimonialsContainer');
 
-  testimonials.forEach((testimonial) => {
-    var figure = document.createElement('figure');
-    figure.className = 'snip1192';
+    // Get a reference to the testimonials collection in the Firebase Realtime Database
+    const testimonialsRef = firebase.database().ref('testimonials');
 
-    var blockquote = document.createElement('blockquote');
-    blockquote.style.textAlign = 'justify';
-    blockquote.textContent = testimonial.content;
+    // Listen for changes in the testimonials collection
+    testimonialsRef.on('value', function(snapshot) {
+      // Clear the existing testimonials from the container
+      testimonialsContainer.innerHTML = '';
 
-    var authorDiv = document.createElement('div');
-    authorDiv.className = 'author';
-    authorDiv.style.paddingTop = '43px';
+      // Loop through each testimonial in the snapshot
+      snapshot.forEach(function(childSnapshot) {
+        // Get the testimonial data
+        const testimonial = childSnapshot.val();
 
-    var authorImg = document.createElement('img');
-    authorImg.src = 'assets/img/nurse.png';
-    authorImg.alt = 'sq-sample1';
+        // Create HTML elements to display the testimonial
+        const figure = document.createElement('figure');
+        // Add necessary classes and styles to figure element
 
-    var authorName = document.createElement('h6');
-    authorName.innerHTML = '<strong>' + testimonial.name + '</strong>';
+        const blockquote = document.createElement('blockquote');
+        blockquote.textContent = testimonial.content;
 
-    var placementSpan = document.createElement('span');
-    placementSpan.className = 'span-test';
-    placementSpan.innerHTML = 'Placed in <strong>' + testimonial.placement + '</strong>';
+        const author = document.createElement('div');
+        // Add necessary classes to author element
 
-    authorDiv.appendChild(authorImg);
-    authorDiv.appendChild(authorName);
-    authorDiv.appendChild(placementSpan);
+        const authorImg = document.createElement('img');
+        // Set the image source and alt text
 
-    figure.appendChild(blockquote);
-    figure.appendChild(authorDiv);
+        const authorName = document.createElement('h6');
+        authorName.innerHTML = testimonial.name;
 
-    testimonialsSection.appendChild(figure);
-  });
-}
+        const placement = document.createElement('span');
+        placement.innerHTML = testimonial.placement;
 
-// Event listener for form submission
-testimonialForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  // Get form values
-  var name = document.getElementById('name').value;
-  var placement = document.getElementById('placement').value;
-  var content = document.getElementById('content').value;
-
-  // Create testimonial object
-  var testimonial = {
-    name: name,
-    placement: placement,
-    content: content
-  };
-
-  // Add testimonial to Firestore
-  addTestimonialToFirestore(testimonial)
-    .then(function() {
-      // Clear form fields after successful submission
-      testimonialForm.reset();
-    })
-    .catch(function (error) {
-      console.error('Error adding testimonial:', error);
+        // Append the elements to the container
+        figure.appendChild(blockquote);
+        figure.appendChild(author);
+        author.appendChild(authorImg);
+        author.appendChild(authorName);
+        author.appendChild(placement);
+        testimonialsContainer.appendChild(figure);
+      });
     });
-});
+
+    // Testimonial form submission
+    const testimonialForm = document.getElementById('testimonialForm');
+    testimonialForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nameInput = document.getElementById('name');
+      const placementInput = document.getElementById('placement');
+      const contentInput = document.getElementById('content');
+
+      // Push the new testimonial data to the database
+      testimonialsRef.push({
+        name: nameInput.value,
+        placement: placementInput.value,
+        content: contentInput.value
+      });
+
+      // Reset the form
+      nameInput.value = '';
+      placementInput.value = '';
+      contentInput.value = '';
+
+      alert('Testimonial added successfully!');
+    });
 
 // Real-time listener for testimonial updates
-db.collection('testimonials')
-  .onSnapshot(function (querySnapshot) {
-    var testimonials = [];
+// db.collection('testimonials')
+//   .onSnapshot(function (querySnapshot) {
+//     var testimonials = [];
 
-    querySnapshot.forEach(function (doc) {
-      var testimonial = doc.data();
-      testimonials.push(testimonial);
-    });
+//     querySnapshot.forEach(function (doc) {
+//       var testimonial = doc.data();
+//       testimonials.push(testimonial);
+//     });
 
-    renderTestimonials(testimonials);
-  });
+//     renderTestimonials(testimonials);
+//   });
+
+
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------------------------
+
 //topil kidakunnathu comment cheyanam ningal ezutiya dataedukunna code
-function getData(){
-    // Retrieve data from Firestore
-db.collection("testimonials").get().then((querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-    // Access individual document data
-    var data = doc.data();
-    console.log(data);
-    return data
-  });
-}).catch((error) => {
-  console.log("Error getting documents: ", error);
-});
-}
+// function getData(){
+//     // Retrieve data from Firestore
+// db.collection("testimonials").get().then((querySnapshot) => {
+//   querySnapshot.forEach((doc) => {
+//     // Access individual document data
+//     var data = doc.data();
+//     console.log(data);
+//     return data
+//   });
+// }).catch((error) => {
+//   console.log("Error getting documents: ", error);
+// });
+// }
