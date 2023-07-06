@@ -7186,3 +7186,40 @@ font-weight: 600;
 .about-img{
   height: 32rem;
 }
+
+
+/* Add your custom CSS styles here */
+.testimonial-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.testimonial-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.testimonial-form input,
+.testimonial-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.testimonial-form button {
+  padding: 8px 15px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.testimonial-form button:hover {
+  background-color: #45a049;
+}

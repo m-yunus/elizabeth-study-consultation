@@ -40,6 +40,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap"
         rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+
     <script type="text/javascript">
         (function () {
             // https://dashboard.emailjs.com/admin/account
@@ -62,13 +65,13 @@
                 <div class="col-lg-9 top-pop ">
                     <ul>
                         <li class="">
-                            <a href=""><i class="fas fa-map-marker-alt"
-                                    style="font-size: 18px;"></i></a>
+                            <a href=""><i class="fas fa-map-marker-alt" style="font-size: 18px;"></i></a>
 
 
                         </li>
                         <li>
-                            <p><a href="https://goo.gl/maps/bRR13Rftz5b5yHSe7">Cambridge, UK</a>  | <a href="https://goo.gl/maps/RH4RYMCQX2L2Gctw9">Kochi,India</a>  </p>
+                            <p><a href="https://goo.gl/maps/bRR13Rftz5b5yHSe7">Cambridge, UK</a> | <a
+                                    href="https://goo.gl/maps/RH4RYMCQX2L2Gctw9">Kochi,India</a> </p>
                         </li>
                         <li>
                             <a href="#"><i class="fas fa-envelope" style="font-size: 18px;"></i></a>
@@ -77,10 +80,12 @@
                             <p><a href="mailto:info@elizabethinternational.co.uk">info@elizabethinternational.co.uk</a>
                             </p>
                         </li>
-                        
+
                         <li>
-                            <a href="https://api.whatsapp.com/send?phone=919400036715&text=Hi%2C%20can%20I%20know%20more%20about%20free%20NHS%20recruitment%3F"><i class="fab fa-whatsapp" style="font-size: 18px;">
-                            </i></a>
+                            <a
+                                href="https://api.whatsapp.com/send?phone=919400036715&text=Hi%2C%20can%20I%20know%20more%20about%20free%20NHS%20recruitment%3F"><i
+                                    class="fab fa-whatsapp" style="font-size: 18px;">
+                                </i></a>
                         </li>
                         <li>
                             <i class="	fas fa-phone-volume" style="font-size: 18px;">
@@ -89,8 +94,8 @@
                         <li>
                             <p><a href="tel:+91 94000 36715" id="pop"> +91 94000 36715</a></p>
                         </li>
-                       
-                       
+
+
                     </ul>
 
 
@@ -572,7 +577,7 @@
     </div>
     <!-- table ends -->
 
-    
+
     <!-- About Section Start -->
     <section class="about-section  rpt-100" style="padding-top: 60px;">
         <div class="site-heading text-center">
@@ -594,7 +599,7 @@
                         style="margin-top: 1rem;">
 
                         <div class="about-features ">
-                            <div class="row" style="row-gap: 30px;" >
+                            <div class="row" style="row-gap: 30px;">
                                 <div class="col-sm-6" style="text-transform: capitalize;">
                                     <div class="feature-item">
                                         <div class="icon">
@@ -751,104 +756,112 @@
                     </div>
                 </div>
                 <div class="col-lg-8 ">
-                    <div class="testimonials-carousel text-center owl-carousel owl-theme " >
+                    <div class="testimonials-carousel text-center owl-carousel owl-theme ">
 
                         <div class=" item">
-                        <div class="provider">
-                            <div class="thumb">
-                                <img src="assets/img/nurse.png" alt="Thumb">
+                            <div class="provider">
+                                <div class="thumb">
+                                    <img src="assets/img/nurse.png" alt="Thumb">
+                                </div>
+                                <div class="bio">
+                                    <h5>Sandra E</h5>
+                                    <span>Placed in <strong>Gloucestershire Hospitals</strong></span>
+                                </div>
                             </div>
-                            <div class="bio">
-                                <h5>Sandra E</h5>
-                                <span>Placed in <strong>Gloucestershire Hospitals</strong></span>
+                            <div class="info">
+                                <p style="text-align: justify;">
+                                    I am very happy to share my experience with Elizabeth International as they helped
+                                    me a
+                                    lot for building up my future. From the beginning to the end of my processing they
+                                    were
+                                    helping me in each steps and answered all my doubts. Staffs were very cooperative
+                                    and
+                                    approachable. Thankyou Elizabeth International.”
+                                </p>
                             </div>
                         </div>
-                        <div class="info">
-                            <p style="text-align: justify;">
-                                I am very happy to share my experience with Elizabeth International as they helped me a
-                                lot for building up my future. From the beginning to the end of my processing they were
-                                helping me in each steps and answered all my doubts. Staffs were very cooperative and
-                                approachable. Thankyou Elizabeth International.”
-                            </p>
+
+                        <div class="item">
+                            <div class="provider">
+                                <div class="thumb">
+                                    <img src="assets/img/nurse.png" alt="Thumb">
+                                </div>
+                                <div class="bio">
+                                    <h5> Shiby Sebastian</h5>
+                                    <span>Placed in <strong> Belfast Health and Social Care Trust</strong></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p style="text-align: justify;">
+                                    Thank you Elizabeth international for your great support to make my dream comes
+                                    true. I
+                                    really appreciate all the crew members of your team. Each step of my process, I felt
+                                    that I was in safe hands and it made me more confident. Moreover, all my queries
+                                    were
+                                    answered on time. I strongly recommend Elizabeth ."
+
+
+
+                                </p>
+                            </div>
                         </div>
+
+                        <div class="item">
+                            <div class="provider">
+                                <div class="thumb">
+                                    <img src="assets/img/nurse.png" alt="Thumb">
+                                </div>
+                                <div class="bio">
+                                    <h5>Sreepriya </h5>
+                                    <span>Placed in <strong>Manchester NHS Foundation Trust</strong></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p style="text-align: justify;">
+
+                                    "I am delighted that Elizabeth international provides me best service for UK visa
+                                    processing. The staffs are friendly, supportive, approachable and polite. Especially
+                                    the
+                                    complaince department. They took less time for the processing and office hours were
+                                    very
+                                    convenient I strongly recommend Elizabeth."
+
+
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="provider">
+                                <div class="thumb">
+                                    <img src="assets/img/nurse.png" alt="Thumb">
+                                </div>
+                                <div class="bio">
+                                    <h5>Anitta Augustin</h5>
+                                    <span>Placed in <strong>Manchester NHS Foundation Trust</strong></span>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p style="text-align: justify;">
+
+                                    "I have had a very good experience with Elizabeth international for my UK
+                                    processing. I
+                                    feel that each member is very friendly and approachable for all stages and we can
+                                    approach them at any time. Thank you Elizabeth international for helping me to reach
+                                    my
+                                    destination I strongly recommend Elizabeth."
+
+
+
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
-
-                    <div class="item">
-                        <div class="provider">
-                            <div class="thumb">
-                                <img src="assets/img/nurse.png" alt="Thumb">
-                            </div>
-                            <div class="bio">
-                                <h5> Shiby Sebastian</h5>
-                                <span>Placed in <strong> Belfast Health and Social Care Trust</strong></span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p style="text-align: justify;">
-                                Thank you Elizabeth international for your great support to make my dream comes true. I
-                                really appreciate all the crew members of your team. Each step of my process, I felt
-                                that I was in safe hands and it made me more confident. Moreover, all my queries were
-                                answered on time. I strongly recommend Elizabeth ."
-
-
-
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="provider">
-                            <div class="thumb">
-                                <img src="assets/img/nurse.png" alt="Thumb">
-                            </div>
-                            <div class="bio">
-                                <h5>Sreepriya </h5>
-                                <span>Placed in <strong>Manchester NHS Foundation Trust</strong></span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p style="text-align: justify;">
-
-                                "I am delighted that Elizabeth international provides me best service for UK visa
-                                processing. The staffs are friendly, supportive, approachable and polite. Especially the
-                                complaince department. They took less time for the processing and office hours were very
-                                convenient I strongly recommend Elizabeth."
-
-
-
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="provider">
-                            <div class="thumb">
-                                <img src="assets/img/nurse.png"
-                                    alt="Thumb">
-                            </div>
-                            <div class="bio">
-                                <h5>Anitta Augustin</h5>
-                                <span>Placed in <strong>Manchester NHS Foundation Trust</strong></span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p style="text-align: justify;">
-
-                                "I have had a very good experience with Elizabeth international for my UK processing. I
-                                feel that each member is very friendly and approachable for all stages and we can
-                                approach them at any time. Thank you Elizabeth international for helping me to reach my
-                                destination I strongly recommend Elizabeth."
-
-
-
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- End Testomonials Area -->
 
@@ -884,7 +897,7 @@
                                 </div>
                             </div>
                             <div class="info" style="padding: 30px;">
-                                
+
                                 <h4>
                                     <a href="#"> NMC started implementing the changes in February 2023 </a>
                                 </h4>
@@ -916,8 +929,8 @@
                                     15 June
                                 </div>
                             </div>
-                            <div class="info"  style="padding: 30px;">
-                                
+                            <div class="info" style="padding: 30px;">
+
                                 <h4 style="padding-bottom: 2rem;">
                                     <a href="#">Changes NMC implemented on 27 May 2023.</a>
                                 </h4>
@@ -949,8 +962,8 @@
                                     27 May
                                 </div>
                             </div>
-                            <div class="info"  style="padding: 30px;">
-                                
+                            <div class="info" style="padding: 30px;">
+
                                 <h4 style="padding-bottom: 4rem;">
                                     <a href="#"> OET/IELTS score clubbing </a>
                                 </h4>
@@ -1270,7 +1283,7 @@
 
 
                                     </li>
-                                  
+
                                 </ul>
                             </div>
                         </div>
@@ -1289,12 +1302,12 @@
                     <div class="col-lg-6 text-right social">
                         <ul>
                             <li>
-                              <a href="Terms&condition.html">Terms & Conditions</a>
-                              </li>
-                              <li>
+                                <a href="Terms&condition.html">Terms & Conditions</a>
+                            </li>
+                            <li>
                                 <a href="Privacy-policy.html">Privacy & Policy</a>
-                              </li>
-                              
+                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -1382,6 +1395,9 @@
             window.open("news-3.html", "_self")
         }
     </script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+     <script src="app.js"></script>
 </body>
 
 </html>
