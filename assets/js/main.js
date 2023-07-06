@@ -648,3 +648,17 @@ db.collection('testimonials')
 
     renderTestimonials(testimonials);
   });
+//topil kidakunnathu comment cheyanam ningal ezutiya dataedukunna code
+function getData(){
+    // Retrieve data from Firestore
+db.collection("testimonials").get().then((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    // Access individual document data
+    var data = doc.data();
+    console.log(data);
+    return data
+  });
+}).catch((error) => {
+  console.log("Error getting documents: ", error);
+});
+}
